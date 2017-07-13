@@ -1,0 +1,268 @@
+<html>
+	<head>
+		<title>Classified.com</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/home_css.css">
+		<script type="text/javascript">
+		
+		$('#myModal').modal('show');
+		$('.selectpicker').selectpicker();
+
+$('body')
+.on('keypress', 'button.selectpicker', function(e) {
+    var $options, $select, ctrl = this;	
+	ctrl.buffer = (ctrl.buffer || "");
+	$select  = $(ctrl).parent('.bootstrap-select').prev('select.selectpicker');
+	$options = $(ctrl).parent('.bootstrap-select').prev('select.selectpicker').find('option');
+	
+    // If capturing, keep capturing
+	if( ctrl.capture ) {
+	    clearTimeout( ctrl.capture );
+	}
+    
+    // capture keystrokes; reset capture after 1sec.
+	ctrl.capture = window.setTimeout( function() {
+	    ctrl.buffer  = "";
+	    ctrl.capture = null;
+    }, 1000);
+	
+    // Use captured buffer to filter <options> of native select
+    // select first and trigger change & refresh
+    ctrl.buffer += String.fromCharCode(e.which);			        
+	var re = new RegExp("^" + ctrl.buffer + ".*", "i");
+	$options.filter( function() {
+        return $(this).text().match(re);
+	})
+    .first().prop('selected', true);
+    $select.change().selectpicker('refresh');
+});
+		
+		</script>
+	</head>
+	<body>
+		<div class="row menu">
+			<div class="col-sm-2 col-xs-2">	
+				<div class="well" style="background-color:white; border:0;">
+					<img src="Images/logo1.jpg" style="height:90px;">
+				</div>
+			</div>
+			<div class="col-sm-10 col-xs-10">		
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+						<button style="margin:10px; vertical-align: middle" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-user"></span> My Account</button>
+					</div>
+				</div>
+				<nav class="navbar navbar-default">
+					<div class="row" style="margin-top:5px; margin-left:5px;">
+						<div class="col-sm-4" style="">
+							<input class="form-control" name="x" placeholder="Search Product...." type="text" style="width:350px;">
+						</div>
+						<div class="col-sm-3" style="">
+							<div class="container body-content">
+								<select class="selectpicker" style="width:200px; height:35px; padding-left:12px;">
+									<optgroup style=" font-size: 15px;">
+										<option>Category - All</option>
+										<option>Electronics</option>
+										<option>Cars</option>
+										<option>Real Estate</option>
+										<option>Furniture</option>
+										<option>Bikes</option>
+									</optgroup>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-3" style="">
+							<div class="container body-content">
+								<select class="selectpicker" style="width:200px; height:40px">
+									<optgroup>	
+										<option>Location - All</option>
+									</optgroup>	
+									<optgroup label="Maharashtra" style=" font-size: 15px;">
+										<option>Pune</option>
+											<option>Mumbai</option>
+											<option>Ahmednagar</option>
+											<option>Nagpur</option>
+											<option>Nashik</option>
+											<option>Thane</option>
+									</optgroup style=" font-size: 15px;">
+									<optgroup label="Gujarat">
+										<option>Ahmedabad</option>
+										<option>Surat</option>
+										<option>Gandhinagar</option>
+									</optgroup>												
+								</select>
+							</div>
+						</div>
+						 <div class="col-sm-2" style="">
+							<span class="input-group-btn">
+								<button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+							</span>
+						 </div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							×</button>
+						<h4 class="modal-title" id="myModalLabel">
+							Login/Registration</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+									<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div class="tab-pane active" id="Login">
+										<form role="form" class="form-horizontal">
+										<div class="form-group">
+											<label for="email" class="col-sm-2 control-label">
+												Username</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="email1" placeholder="Username" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1" class="col-sm-2 control-label">
+												Password</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="exampleInputPassword1" placeholder="********" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2">
+											</div>
+											<div class="col-sm-10">
+												<button type="submit" class="btn btn-primary btn-sm">
+													Submit</button>
+												<a href="javascript:;">Forgot your password?</a>
+											</div>
+										</div>
+										</form>
+									</div>
+									<div class="tab-pane" id="Registration">
+										<form role="form" class="form-horizontal">
+										<div class="form-group" >
+											<label for="email" class="col-sm-2 control-label">
+												Name</label>
+											<div class="col-sm-5">
+												<input type="email" class="form-control" id="email" placeholder="First Name" />
+											</div>
+											<div class="col-sm-5">
+												<input type="email" class="form-control" id="email" placeholder="Last Name" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="col-sm-2 control-label">
+												Username</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="email" placeholder="Username" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="email" class="col-sm-2 control-label">
+												Email</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="mobile" class="col-sm-2 control-label">
+												Mobile</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="password" class="col-sm-2 control-label">
+												Password</label>
+											<div class="col-sm-10">
+												<input type="password" class="form-control" id="password" placeholder="Password" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2">
+											</div>
+											<div class="col-sm-10">
+												<button type="button" class="btn btn-primary btn-sm">
+													Save & Continue</button>
+												<button type="button" class="btn btn-default btn-sm">
+													Cancel</button>
+											</div>
+										</div>
+										</form>
+									</div>
+								</div>
+								<div id="OR" class="hidden-xs">
+									OR</div>
+							</div>
+							<div class="col-md-4">
+								<div class="row text-center sign-with">
+									<div class="col-md-12">
+										<h3>
+											Sign in with</h3>
+									</div>
+									<div class="col-md-12">
+										<div class="btn-group btn-group-justified">
+											<a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
+												Google</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid text-center">    
+			<div class="row content">
+
+				<div class="col-sm-10 text-left"> 
+					<div class="container">
+						<div class="row imagetiles">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="Images/car.jpg" class="img-responsive">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="Images/real_estate.jpg" class="img-responsive">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="Images/bike.png" class="img-responsive">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="Images/electronics.png" class="img-responsive">
+							</div>							
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2 sidenav">
+					<div class="well">
+						<p>ADS</p>
+					</div>
+					<div class="well">
+						<p>ADS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+	</body>
+</html>
