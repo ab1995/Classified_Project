@@ -44,18 +44,21 @@ $('body')
 	</head>
 	<body>
 		<div class="row menu">
+			<div class="col-sm-2 col-xs-2">	
+				<div  style="background-color:white; border:0; height:100px; margin-top:5%;">
+					<img src="Images/logo1.jpg" style="height:90px;" class="figure-img img-fluid   center-block">
+				</div>
+			</div>
+			<div class="col-sm-10 col-xs-10">		
+				<div class="row" style="background-color:#7d7d7d; margin-left:0px;">
+					<div class="col-sm-12 col-xs-12">
+						<button style="margin:10px; vertical-align: middle;" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-share"></span> Post Ad</button>
+						<button style="margin:10px; vertical-align: middle;" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal_2" ><span class="glyphicon glyphicon-user"></span> My Account</button>
 
-			<div class="col-sm-12 col-xs-12">	
-
-				<div class="row" style="background-color:white; margin-left:0px;">
-					<div class="col-sm-12 col-xs-12" style="margin-bottom:-10px; margin-top:-5px;">
-						<button style="margin:10px; vertical-align: middle;" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal_2" ><span class="glyphicon glyphicon-share"></span> Post Ad</button>
-						<button style="margin:10px; vertical-align: middle;" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-user"></span> My Account</button>
-						<label id="logoLabel" >Classified.Com</label>
 					</div>
 					
 				</div>
-				<nav class="navbar navbar-default" style="background-color:#9acbd5; margin-left:0px;">
+				<nav class="navbar navbar-default" style="background-color:black; margin-left:0px;">
 					<div class="row" style="margin-top:5px; margin-left:0px;">
 						<div class="col-sm-4" style="">
 							<input class="form-control" name="x" placeholder="Search Product...." type="text" style="width:350px;">
@@ -105,7 +108,7 @@ $('body')
 				</nav>
 			</div>
 		</div>
-<!------------------------------------------ SignIN/Registration---------------------------------------- -->		
+
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -227,7 +230,8 @@ $('body')
 				</div>
 			</div>
 		</div>
-		<!------------------------------------------ Post Ad---------------------------------------- -->
+		
+<!-->==================================================================================================<-->
 		<div class="modal fade" id="myModal_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -235,11 +239,12 @@ $('body')
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 							×</button>
 						<h4 class="modal-title" id="myModalLabel">
-							Upload Free Ad</h4>
+							Login/Registration</h4>
 					</div>
 					<div class="modal-body">
-					<div class="container col-centered" >
+					<div class="container">
 						<form class="form-horizontal" role="form">
+							<h2>Upload Free Ad</h2>
 							<div class="form-group">
 								<label for="firstName" class="col-sm-3 control-label">Name</label>
 								<div class="col-sm-9">
@@ -331,182 +336,109 @@ $('body')
 				</div>
 			</div>
 		</div>
-<!-----------------------------------------------body------------------------------------------- -->		
+<!-->====================================================================================================================<-->
+		
 		<div class="container-fluid text-center">    
 			<div class="row content" style="margin-top:2%;">
 
-				<div class="col-sm-2 sidenav" id="leftSide">
-					<div class="sideadd">
-						<img src="Images/ad4.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:400px; ">
-					</div>
+				<div class="col-sm-2 sidenav">
+
 				</div>
 
-				<div class="col-sm-8 text-left"  	id="mainBody"> 
-					<div id="browseLabel">
-						<p>Browse Categories</p>
-					</div>
-					<div class="container" >
-						<div style=" background-color:#F5F5F5; padding:10px;"  >
-						<div class="row imagetiles" >
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/car.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Cars</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/real_estate.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Real Estate</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/bike.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba; ">Bikes</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/electronics.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Electronics</figcaption>
-								</figure>
+				<div class="col-sm-8 text-left" style=" background-color:#F5F5F5;"> 
+					<div class="container">
+						<form class="form-horizontal" role="form">
+							<h2>Upload Free Ad</h2>
+							<div class="form-group">
+								<label for="firstName" class="col-sm-3 control-label">Name</label>
+								<div class="col-sm-9">
+									<input type="text" id="firstName" placeholder="" class="form-control" autofocus>
+								</div>
 							</div>							
-							
-						</div>
+							<div class="form-group">
+								<label for="firstName" class="col-sm-3 control-label">Ad Title</label>
+								<div class="col-sm-9">
+									<input type="text" id="firstName" placeholder="Samsung S8..." class="form-control" autofocus>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="country" class="col-sm-3 control-label">Category</label>
+								<div class="col-sm-9">
+									<select id="country" class="form-control">
+										<option>Category - All</option>
+										<option>Electronics</option>
+										<option>Cars</option>
+										<option>Real Estate</option>
+										<option>Furniture</option>
+										<option>Bikes</option>
+									</select>
+								</div>
+							</div> <!-- /.form-group -->
+							<div class="form-group">
+								<label for="email" class="col-sm-3 control-label">Description</label>
+								<div class="col-sm-9">
+									<textarea  id="email" placeholder="Include Product details..." class="form-control" rows=5> </textarea>
+								</div>
+								
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-sm-3 control-label">Upload Photos</label>
+								<div class="col-sm-9">
 
-						<div class="row imagetiles" style="margin-top:2%;">
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/furniture.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Furniture</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/services.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Services</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
-								<a href="#" class="imglink"><figure class="figure">
-  									<img src="Images/toys.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
-  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Toys</figcaption>
-								</figure>
-							</div>													
-							
-						</div>
-						</div>
-					</div>
-					
-<!----------------------------------------------- latest ads post ---------------------------------------------->
-					<div id="browseLabel" style="margin-top:30px;">
-						<p>Latest Ads</p>
-					</div>
-										
-					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
-						<div class="col-sm-2">
-							<img src="Images/samsung_case.png" class="figure-img img-fluid img-responsive center-block" style="width:100px; height:100px; ">
-						</div>
-						<div class="col-sm-10" style="">
-							<div class="productTitle">
-								Samsung Emerge Case 
-							</div>
-							<div class="productDescription">
-								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
-								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
-								We offer free shipping, low prices and 365-day returns to all of our customers.
-							</div>
-							<div class="productDetail" style="margin-top:5px;">
-								<p>Rs 8000</p>
-								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
-								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
-						<div class="col-sm-2">
-							<img src="Images/samsung_case.png" class="figure-img img-fluid img-responsive center-block" style="width:100px; height:100px; ">
-						</div>
-						<div class="col-sm-10" style="">
-							<div class="productTitle">
-								Samsung Emerge Case 
-							</div>
-							<div class="productDescription">
-								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
-								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
-								We offer free shipping, low prices and 365-day returns to all of our customers.
-							</div>
-							<div class="productDetail" style="margin-top:5px;">
-								<p>Rs 8000</p>
-								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
-								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
-							</div>
-						</div>
-					</div>
+									<input id="input-44" name="input44[]" type="file" multiple class="file-loading">
+									<script>
 
-					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
-						<div class="col-sm-2">
-							<img src="Images/samsung_case.png" class="figure-img img-fluid img-responsive center-block" style="width:100px; height:100px; ">
-						</div>
-						<div class="col-sm-10" style="">
-							<div class="productTitle">
-								Samsung Emerge Case 
+									</script>
+								</div>
+								
 							</div>
-							<div class="productDescription">
-								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
-								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
-								We offer free shipping, low prices and 365-day returns to all of our customers.
+							<div class="form-group">
+								<label for="firstName" class="col-sm-3 control-label">Email</label>
+								<div class="col-sm-9">
+									<input type="email" id="firstName" placeholder="emailID" class="form-control" autofocus>
+								</div>
 							</div>
-							<div class="productDetail" style="margin-top:5px;">
-								<p>Rs 8000</p>
-								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
-								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
-							</div>
-						</div>
-					</div>
+							<div class="form-group">
+								<label for="country" class="col-sm-3 control-label">Location</label>
+								<div class="col-sm-9">
+									<select id="country" class="form-control">
+	
+									<optgroup label="Maharashtra" style=" font-size: 15px;">
+										<option>Pune</option>
+										<option>Mumbai</option>
+										<option>Ahmednagar</option>
+										<option>Nagpur</option>
+										<option>Nashik</option>
+										<option>Thane</option>
+									</optgroup style=" font-size: 15px;">
+									<optgroup label="Gujarat">
+										<option>Ahmedabad</option>
+										<option>Surat</option>
+										<option>Gandhinagar</option>
+									</optgroup>												
+									</select>
+								</div>
+							</div> <!-- /.form-group -->
 
-					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
-						<div class="col-sm-2">
-							<img src="Images/samsung_case.png" class="figure-img img-fluid img-responsive center-block" style="width:100px; height:100px; ">
-						</div>
-						<div class="col-sm-10" style="">
-							<div class="productTitle">
-								Samsung Emerge Case 
+							<div class="form-group">
+								<div class="col-sm-9 col-sm-offset-3">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">I accept <a href="#">terms</a>
+										</label>
+									</div>
+								</div>
+							</div> <!-- /.form-group -->
+							<div class="form-group">
+								<div class="col-sm-9 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary btn-block">Post Ad</button>
+								</div>
 							</div>
-							<div class="productDescription">
-								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
-								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
-								We offer free shipping, low prices and 365-day returns to all of our customers.
-							</div>
-							<div class="productDetail" style="margin-top:5px;">
-								<p>Rs 8000</p>
-								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
-								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
-							</div>
-						</div>
-					</div>
-				
-					<div style="text-align:center;">
-					  <div class="pagination">
-						<a href="#">&laquo;</a>
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#">6</a>
-						<a href="#">&raquo;</a>
-					  </div>
-					</div>
-					
+						</form> <!-- /form -->
+					</div> <!-- ./container -->
 				</div>
-						
-				<div class="col-sm-2 sidenav" style="background-color:white;">
-					<div class="sideadd" >
-						<img src="Images/ad4.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:400px; ">
-					</div>
+				<div class="col-sm-2 sidenav">
+
 				</div>
 			</div>
 		</div>
