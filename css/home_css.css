@@ -1,5 +1,13 @@
 *{
      font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+#logoLabel{
+	font-family: Courier New;
+	color:#286090;
+	font-size:30px;
+	margin-top:10px;
 }
 
 /*================================Navigation Bar====================================*/ 
@@ -21,13 +29,12 @@
 	padding-left:0px !important;
 }
 
-.row .well{
-	
-	height: 200px;
-    width: 150px;
-	margin: 0;
-	text-align: center;
+
+
+.sideadd{
+	height:400px;
 }
+
 
 .top_link{
 	padding: 15px;
@@ -92,4 +99,99 @@ div#OR {
 figcaption{
     
     font-size: 15px;
+}
+
+#browseLabel{
+	font-size:30px;
+	text-align:center;
+	color:#296d4a;
+}
+/*==================================Ad Form=================================*/
+*[role="form"] {
+    width: 500px;
+	margin-left:8%;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+/*==================================Image Link Formatting bed4db=================================*/
+.imglink .img-responsive
+{
+   background-color:white; 
+}
+
+.imglink:hover .img-responsive
+{
+    background-color:  #a3a5b7; 
+    color: #a3a5b7; 
+}
+
+
+.productTitle a{
+	font-size:20px;
+	color:#00c0d2;
+}
+
+.productTitle a:hover{
+    font-size:20px;
+    color:blue;
+}
+
+.productDescription{
+	text-align:justify;
+}
+
+.productDetail p{
+	font-size:20px;
+	color:#d83a53;
+}
+
+.productDetail div{
+	font-size:15px;
+	color:#48384d;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+  
+}
+
+.pagination a.active {
+    background-color: #286090;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+#sellerInfo h2{
+    color:#43714A;
+}
+
+#sellerInfo p {
+    color:#48384d;
 }
