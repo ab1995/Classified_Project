@@ -1,20 +1,312 @@
 <html>
-<head>
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="//raw.github.com/botmonster/jquery-bootpag/master/lib/jquery.bootpag.min.js"></script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-</head>
-<body>
-    <div id="content">Dynamic Content goes here</div>
-    <div id="page-selection">Pagination goes here</div>
-    <script>
-        // init bootpag
-        $('#page-selection').bootpag({
-            total: 10
-        }).on("page", function(event, /* page number here */ num){
-             $("#content").html("Insert content"); // some ajax content loading...
-        });
-    </script>
-</body>
+	<head>
+		<title>Classified.com</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+		<link rel="stylesheet" href="css/home_css.css">
+		<link rel="stylesheet" href="css/footer-distributed.css">
+		<script type="text/javascript">
+		
+		$('#myModal').modal('show');
+		$('.selectpicker').selectpicker();
+
+$('body')
+.on('keypress', 'button.selectpicker', function(e) {
+    var $options, $select, ctrl = this;	
+	ctrl.buffer = (ctrl.buffer || "");
+	$select  = $(ctrl).parent('.bootstrap-select').prev('select.selectpicker');
+	$options = $(ctrl).parent('.bootstrap-select').prev('select.selectpicker').find('option');
+	
+    // If capturing, keep capturing
+	if( ctrl.capture ) {
+	    clearTimeout( ctrl.capture );
+	}
+    
+    // capture keystrokes; reset capture after 1sec.
+	ctrl.capture = window.setTimeout( function() {
+	    ctrl.buffer  = "";
+	    ctrl.capture = null;
+    }, 1000);
+	
+    // Use captured buffer to filter <options> of native select
+    // select first and trigger change & refresh
+    ctrl.buffer += String.fromCharCode(e.which);			        
+	var re = new RegExp("^" + ctrl.buffer + ".*", "i");
+	$options.filter( function() {
+        return $(this).text().match(re);
+	})
+    .first().prop('selected', true);
+    $select.change().selectpicker('refresh');
+});
+		
+		function myFunction()
+		{
+		    var x = document.getElementById('mycon');
+			var y = document.getElementById('browseLabel');
+			var z = document.getElementById('sideadd1');
+			var a = document.getElementById('browseLabel1');
+			var b = document.getElementById('sideMenu');
+			if (x.style.display === 'none' || y.style.display === 'none'|| z.style.display === 'none'|| a.style.display === 'none') {
+				x.style.display = 'block';
+				y.style.display === 'block';
+				z.style.display === 'block';
+				a.style.display === 'block';
+				b.style.display = 'none';
+			} else {
+				x.style.display = 'none';
+				y.style.display = 'none';
+				z.style.display = 'none';
+				a.style.display = 'none';
+				b.style.display = 'block';
+			}
+		}
+		</script>
+		
+
+	</head>
+
+	<body>
+
+
+<!-----------------------------------------------body------------------------------------------- -->		
+		<div class="container-fluid text-center">    
+			<div class="row content" style="margin-top:2%;">
+
+				<div class="col-sm-2 sidenav" id="leftSide" style="margin-top:3%;">
+					<div id="sideadd1">
+					<div class="sideadd">
+						<img src="Images/ad4.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:400px; ">
+					</div>
+					<div class="sideadd" style="margin-top:200px;" >
+						<img src="Images/ad8.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:auto; ">
+					</div>
+					</div>
+					
+					<ul class="nav nav-pills nav-stacked" id="sideMenu">
+						<li class="active"><a  data-toggle="tab" href="#">Electronics</a></li>
+						<li><a  data-toggle="tab" href="#">Real Estate</a></li>
+						<li><a  data-toggle="tab"  href="#">Bikes</a></li>
+						<li><a  data-toggle="tab"  href="#">Cars</a></li>
+						<li><a  data-toggle="tab"  href="#">Furniture</a></li>
+						<li><a  data-toggle="tab"  href="#">Services</a></li>
+						<li><a  data-toggle="tab"  href="#">Toys</a></li>
+						<li><a  data-toggle="tab"  href="#">Books</a></li>
+					</ul>
+  
+				</div>
+
+				<div class="col-sm-8 text-left"  	id="mainBody"> 
+					<div id="browseLabel">
+						<p>Browse Categories</p>
+
+					</div>
+					<div class="container">
+						<div style=" background-color:#F5F5F5; padding:10px; ""  id="mycon" >
+						<div class="row imagetiles" style="margin-left:30px;" >
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/electronics.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Electronics</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/real_estate.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Real Estate</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/bike.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba; ">Bikes</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/car.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Cars</figcaption>
+								</figure>
+							</div>							
+							
+						</div>
+
+						<div class="row imagetiles" style="margin-top:2%; margin-left:30px;">
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/furniture.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Furniture</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/services.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Services</figcaption>
+								</figure>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/toys.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Toys</figcaption>
+								</figure>
+							</div>													
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6	">
+								<a href="#" class="imglink" onclick="myFunction()"><figure class="figure">
+  									<img src="Images/books.png" class="figure-img img-fluid rounded img-responsive img-circle center-block" style="width:150px; height:150px; "></a>
+  									<figcaption class="figure-caption" style="text-align:center; color:#4e80ba;">Books</figcaption>
+								</figure>
+							</div>							
+						</div>
+						</div>
+					</div>
+					
+<!----------------------------------------------- latest ads post ---------------------------------------------->
+					<div id="browseLabel1" style="margin-top:30px;">
+						<p>Latest Ads</p>
+					</div>
+										
+					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
+						<div class="col-sm-2">
+							<img src="Images/samsung_emerge2.jpg" class="figure-img img-fluid img-responsive center-block" style="width:150px; height:180px;padding:10px; ">
+						</div>
+						<div class="col-sm-10" style="padding:10px;">
+							<div class="productTitle">
+								<a href="product.html">Samsung Emerge Case</a>
+							</div>
+							<div class="productDescription">
+								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
+								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
+								We offer free shipping, low prices and 365-day returns to all of our customers.
+							</div>
+							<div class="productDetail" style="margin-top:5px;">
+								<p>Rs 8000</p>
+								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
+								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
+						<div class="col-sm-2">
+							<img src="Images/i7.jpg" class="figure-img img-fluid img-responsive center-block" style="width:150px; height:180px;padding:10px; ">
+						</div>
+						<div class="col-sm-10" style="">
+							<div class="productTitle">
+								<a href="product.html">Buy Apple iPhone 7 Plus 256GB Red</a>
+							</div>
+							<div class="productDescription">
+								Buy Brand Apple iPhone 7 Plus Red and Samsung S8+ Plus New Edition
+								WhatsApp Chat: +13207608686
+								Text or Call: +254775472634
+								Email: castillejast@gmail.com
+								Skype: heriplazaltd
+							</div>
+							<div class="productDetail" style="margin-top:5px;">
+								<p>Rs 58000</p>
+								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
+								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
+						<div class="col-sm-2">
+							<img src="Images/samsung_emerge2.jpg" class="figure-img img-fluid img-responsive center-block" style="width:150px; height:180px;padding:10px; ">
+						</div>
+						<div class="col-sm-10" style="">
+							<div class="productTitle">
+								<a href="product.html">Samsung Emerge Case</a>
+							</div>
+							<div class="productDescription">
+								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
+								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
+								We offer free shipping, low prices and 365-day returns to all of our customers.
+							</div>
+							<div class="productDetail" style="margin-top:5px;">
+								<p>Rs 8000</p>
+								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
+								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row"  style="background-color:#F5F5F5; margin-top:20px;">
+						<div class="col-sm-2">
+							<img src="Images/samsung_emerge2.jpg" class="figure-img img-fluid img-responsive center-block" style="width:150px; height:180px;padding:10px; ">
+						</div>
+						<div class="col-sm-10" style="">
+							<div class="productTitle">
+								<a href="product.html">Samsung Emerge Case</a>
+							</div>
+							<div class="productDescription">
+								Are you looking for Samsung Emerge Cases ? Visit us at CellPhoneCases and give your Samsung Smartphone a new and unique look.
+								We also have the diverse selection of Apple, Samsung, HTC, Nokia, Motorola, Microsoft, Fitbit, Nintendo, Oneplus, Blackberry and many others accessories.
+								We offer free shipping, low prices and 365-day returns to all of our customers.
+							</div>
+							<div class="productDetail" style="margin-top:5px;">
+								<p>Rs 8000</p>
+								<div><span class="glyphicon glyphicon-map-marker"></span></span> Pune</div>
+								<div><span class="glyphicon glyphicon-user"></span></span> Ajay Singh</div>
+							</div>
+						</div>
+					</div>
+				
+					<div style="text-align:center;">
+					  <div class="pagination">
+						<a href="#">&laquo;</a>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">&raquo;</a>
+					  </div>
+					</div>
+					
+				</div>
+						
+				<div class="col-sm-2 sidenav" style="background-color:white; margin-top:3%;">
+					<div class="sideadd" >
+						<img src="Images/ad6.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:400px; ">
+					</div>
+					<div class="sideadd" style="margin-top:200px;" >
+						<img src="Images/ad7.gif" class="figure-img img-fluid rounded img-responsive  center-block" style="width:170px; height:400px; ">
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-right" style="margin-top:1%;">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="home.html">Home</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">FAQs</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p>Classified.Com &copy; 2015</p>
+			</div>
+
+		</footer>
+	</body>
 </html>
